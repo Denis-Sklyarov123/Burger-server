@@ -1,4 +1,5 @@
-import BurgerSchema from '../models/';
+import MenuSchema from '../models/Menu';
+import FillingsSchema from '../models/Fillings';
 import fs from 'fs';
 
 const getAll = async function (req: any, res: any) {
@@ -12,13 +13,20 @@ const getAll = async function (req: any, res: any) {
   }, 2000);
 };
 
-const save = async function (req: any, res: any) {
-  console.log(req.query);
-  const { name } = req.query;
+const getByCategory = async function (req: any, res: any) {
+  const { selectedCategory } = req.query;
 
-  const meat = await BurgerSchema.create({ name });
+  const product = await MenuSchema.find({ category: selectedCategory });
 
-  res.send(meat);
+  res.send(product);
 };
 
-export { getAll, save };
+const getByCategoryModal = async function (req: any, res: any) {
+  const { category } = req.query;
+
+  const typeProduct = await FillingsSchema.find({ type: category });
+
+  res.send(typeProduct);
+};
+
+export { getAll, getByCategory, getByCategoryModal };
