@@ -35,7 +35,6 @@ const login = async (req: Request, res: Response) => {
   if (!isPassValid) {
     return res.status(400).send({ message: `Pass or username or email not correct` });
   }
-  console.log(findUser);
 
   const token = jwt.sign(
     { login: findUser.login, password: findUser.password, email: findUser.email },
