@@ -7,9 +7,9 @@ const addFillingsToBd = () => {
   const parseJson = JSON.parse(json);
 
   menuItems.map((category: string) => {
-    const test: object = parseJson[category];
+    const itemsByCategory: object = parseJson[category];
 
-    Object.values(test).map((item: object) => {
+    Object.values(itemsByCategory).map((item: object) => {
       console.log({ ...item, type: category });
       FillingsSchema.create({ ...item, type: category });
     });

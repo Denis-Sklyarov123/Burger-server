@@ -11,7 +11,7 @@ const createUser = async (req: Request, res: Response) => {
     $or: [{ login: query.login }, { email: query.email }],
   });
   if (isUserFind) {
-    return res.status(400).send({ message: `You are already registered` });
+    return res.status(201).send({ message: `You are already registered` });
   }
 
   const user = await UserSchema.create({
@@ -28,12 +28,12 @@ const login = async (req: Request, res: Response) => {
   });
 
   if (!findUser) {
-    return res.status(400).send({ message: `You are not register` });
+    return res.status(404).send({ message: `You are not register` });
   }
 
   const isPassValid = await bcrypt.compare(password.toString(), findUser.password);
   if (!isPassValid) {
-    return res.status(400).send({ message: `Pass or username or email not correct` });
+    return res.status(418).send({ message: `Pass or username or email not correct` });
   }
 
   const token = jwt.sign(

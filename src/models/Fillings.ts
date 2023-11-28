@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose';
+import { FillingsType } from '../types/fillingsType';
 
-const FillingsSchema = new Schema({
+const FillingsSchema = new Schema<FillingsType>({
   name: String,
   description: String,
   image: String,

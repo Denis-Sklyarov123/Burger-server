@@ -8,10 +8,11 @@ import mongoose from 'mongoose';
 
 const app = express();
 const port = 3000;
+const clientUrl = process.env.CLIENT_URL ?? 'http://localhost:8080/';
 
 app.use(
   cors({
-    origin: ['http://localhost:8081', 'http://localhost:8080'],
+    origin: [clientUrl],
     credentials: true,
   })
 );
