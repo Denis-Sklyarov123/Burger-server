@@ -5,6 +5,12 @@ import express from 'express';
 import additionalRoutes from './routes/index';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import ProductsSchema from './models/Products';
+import addProductsToBd from './helpers/addProductsToBD';
+import MenuSchema from './models/Menu';
+import addMenuToBd from './helpers/addMenuToBD';
+import addFillingsToBd from './helpers/addFillingsToBD';
+import FillingsSchema from './models/Fillings';
 
 const app = express();
 const port = 3000;
@@ -28,6 +34,28 @@ mongoose
       message: err,
     });
   });
+
+async function addDataIsCollectionEmpty() {
+  const products = await ProductsSchema.find();
+  if (!products.length) {
+    console.log('Products is empty');
+    addProductsToBd();
+  }
+
+  const menu = await MenuSchema.find();
+  if (!menu.length) {
+    console.log('Menu is empty');
+    addMenuToBd();
+  }
+
+  const fillings = await FillingsSchema.find();
+  if (!fillings.length) {
+    console.log('Fillings is empty');
+    addFillingsToBd();
+  }
+}
+
+addDataIsCollectionEmpty();
 
 app.use(additionalRoutes);
 

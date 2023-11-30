@@ -1,17 +1,13 @@
-import json from '../mocks/data.json';
+import menu from '../mocks/menu.json';
 import MenuSchema from '../models/Menu';
 
-const addMenuToBd = () => {
-  json.menu.map(async item => {
+const addMenuToBd = async () => {
+  for (const item of menu) {
     await MenuSchema.create({
-      category: item.category,
-      description: item.description,
-      image: item.image,
-      name: item.name,
-      price: item.price,
+      key: item.keyCategory,
+      name: item.nameCategory,
     });
-    console.log(`${item.name} add`);
-  });
+  }
 };
 
 export default addMenuToBd;
