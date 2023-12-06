@@ -3,6 +3,7 @@ dotenv.config();
 
 import express from 'express';
 import additionalRoutes from './routes/index';
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import ProductsSchema from './models/Products';
@@ -22,6 +23,8 @@ app.use(
     credentials: true,
   })
 );
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 mongoose
   .connect(`mongodb://localhost:27017/Burgers`)

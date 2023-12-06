@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 const createUser = async (req: Request, res: Response) => {
-  const query = req.query;
+  const query = req.body;
 
   const isUserFind = await UserSchema.findOne({
     $or: [{ login: query.login }, { email: query.email }],
