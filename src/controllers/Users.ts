@@ -22,7 +22,8 @@ const createUser = async (req: Request, res: Response) => {
 };
 
 const login = async (req: Request, res: Response) => {
-  const { emailOrUserName, password } = req.query;
+  const { emailOrUserName, password } = req.body;
+
   const findUser = await UserSchema.findOne({
     $or: [{ login: emailOrUserName }, { email: emailOrUserName }],
   });
@@ -37,10 +38,18 @@ const login = async (req: Request, res: Response) => {
   }
 
   const token = jwt.sign(
-    { login: findUser.login, password: findUser.password, email: findUser.email },
+    {
+      login: findUser.login,
+      password: findUser.password,
+      email: findUser.email,
+      name: findUser.name,
+      number: findUser,
+    },
     process.env.SECRET_KEY
   );
-  return res.cookie('Token', token, { maxAge: 7 * 24 * 60 * 60 * 1000 }).send({ message: 'You login. Welcome', token });
+  return res
+    .cookie('Token', token, { maxAge: 7 * 24 * 60 * 60 * 1000 })
+    .send({ message: 'You login. Welcome', user: findUser });
 };
 
 export { createUser, login };
