@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import hashPassword from '../helpers/hashPassword';
-import UserSchema from '../models/Users';
+import UserSchema from '../models/User';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
@@ -18,7 +18,8 @@ const createUser = async (req: Request, res: Response) => {
     ...query,
     password: await hashPassword(query.password.toString()),
   });
-  res.send(user);
+
+  return res.send(user);
 };
 
 const login = async (req: Request, res: Response) => {
@@ -43,10 +44,11 @@ const login = async (req: Request, res: Response) => {
       password: findUser.password,
       email: findUser.email,
       name: findUser.name,
-      number: findUser,
+      number: findUser.number,
     },
     process.env.SECRET_KEY
   );
+
   return res
     .cookie('Token', token, { maxAge: 7 * 24 * 60 * 60 * 1000 })
     .send({ message: 'You login. Welcome', user: findUser });

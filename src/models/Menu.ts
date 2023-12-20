@@ -1,5 +1,9 @@
 import { Schema, model } from 'mongoose';
-import { MenuType } from '../types/menuType';
+
+export interface MenuType {
+  key: string;
+  name: string;
+}
 
 const MenuSchema = new Schema<MenuType>({
   key: String,

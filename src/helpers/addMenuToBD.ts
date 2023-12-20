@@ -1,4 +1,4 @@
-import menu from '../mocks/menu.json';
+import * as menu from '../mocks/menu.json';
 import MenuSchema from '../models/Menu';
 
 const addMenuToBd = async () => {

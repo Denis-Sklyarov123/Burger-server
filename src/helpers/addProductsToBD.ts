@@ -1,5 +1,5 @@
-import json from '../mocks/data.json';
-import ProductsSchema from '../models/Products';
+import * as json from '../mocks/data.json';
+import ProductsSchema from '../models/Product';
 
 const addProductsToBd = () => {
   json.menu.map(async item => {

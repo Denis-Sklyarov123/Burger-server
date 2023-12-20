@@ -1,4 +1,4 @@
-import ProductsSchema from '../models/Products';
+import ProductsSchema from '../models/Product';
 import { Request, Response } from 'express';
 
 const getByCategory = async function (req: Request, res: Response) {

@@ -1,5 +1,5 @@
-import FillingsSchema from '../models/Fillings';
-import fs from 'fs';
+import FillingsSchema from '../models/Filling';
+import * as fs from 'fs';
 
 const addFillingsToBd = () => {
   const ProductsItems = ['sizes', 'breads', 'vegetables', 'sauces', 'fillings'];

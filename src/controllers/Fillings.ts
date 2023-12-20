@@ -1,4 +1,4 @@
-import FillingsSchema from '../models/Fillings';
+import FillingsSchema from '../models/Filling';
 import { Request, Response } from 'express';
 
 const getByCategoryFillings = async function (req: Request, res: Response) {

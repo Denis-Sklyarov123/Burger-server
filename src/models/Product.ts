@@ -1,5 +1,12 @@
 import { Schema, model } from 'mongoose';
-import { ProductsType } from '../types/productsType';
+
+export interface ProductsType {
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  category: string;
+}
 
 const ProductsSchema = new Schema<ProductsType>({
   name: String,
