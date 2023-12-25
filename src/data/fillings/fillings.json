@@ -1,0 +1,281 @@
+[{
+  "name": "Белый итальянский",
+  "description": "",
+  "image": "/i/bread/white-italian.png",
+  "price": 0,
+  "type": "breads"
+},{
+  "name": "Пекинская капуста",
+  "description": "",
+  "image": "/i/ingredients/vegetables/pekinka.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Помидор",
+  "description": "",
+  "image": "/i/ingredients/vegetables/tomato.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Соленый огурец",
+  "description": "",
+  "image": "/i/ingredients/vegetables/pickled-cucumber.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Красный лук",
+  "description": "",
+  "image": "/i/ingredients/vegetables/onion-purple.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Серый",
+  "description": "",
+  "image": "/i/bread/unknown_1.png",
+  "price": 0,
+  "type": "breads"
+},{
+  "name": "Винный уксус",
+  "description": "",
+  "image": "/i/ingredients/sauces/wine-vinegar.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Болгарский перец",
+  "description": "",
+  "image": "/i/ingredients/vegetables/green-peppers-bulgarian.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Острый перец Халапеньо",
+  "description": "",
+  "image": "/i/ingredients/vegetables/pepper-hapapeno.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "1000 Островов",
+  "description": "",
+  "image": "/i/ingredients/sauces/1000-islands.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Барбекю",
+  "description": "",
+  "image": "/i/ingredients/sauces/bbq.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Сырный",
+  "description": "",
+  "image": "/i/ingredients/sauces/cheese.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Чиппотл",
+  "description": "",
+  "image": "/i/ingredients/sauces/chipotle.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Чесночный",
+  "description": "",
+  "image": "/i/ingredients/sauces/garlic.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Майонез",
+  "description": "",
+  "image": "/i/ingredients/sauces/mayonnaise.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Горчица",
+  "description": "",
+  "image": "/i/ingredients/sauces/mustard.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Горчица медовая",
+  "description": "",
+  "image": "/i/ingredients/sauces/mustard-and-honey.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Бекон",
+  "description": "(3-4 кусочка)",
+  "image": "/i/ingredients/products/bacon.png",
+  "price": 35,
+  "type": "fillings"
+},{
+  "name": "Острый кетчуп",
+  "description": "",
+  "image": "/i/ingredients/sauces/spicy-ketchup.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Кисло-сладкий",
+  "description": "",
+  "image": "/i/ingredients/sauces/sweet-and-sour.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Сладкий лук",
+  "description": "",
+  "image": "/i/ingredients/sauces/sweet-onion.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Серый с овсяными хлопьями",
+  "description": "",
+  "image": "/i/bread/grey-with-cereal.png",
+  "price": 0,
+  "type": "breads"
+},{
+  "name": "Маслины",
+  "description": "",
+  "image": "/i/ingredients/vegetables/olives.png",
+  "price": 0,
+  "type": "vegetables"
+},{
+  "name": "Сыр",
+  "description": "(2 треугольника)",
+  "image": "/i/ingredients/products/cheese.png",
+  "price": 20,
+  "type": "fillings"
+},{
+  "name": "Оливковое масло",
+  "description": "",
+  "image": "/i/ingredients/sauces/olive-oil.png",
+  "price": 0,
+  "type": "sauces"
+},{
+  "name": "Куриная грудка",
+  "description": "",
+  "image": "/i/ingredients/products/chicken-breast.png",
+  "price": 60,
+  "type": "fillings"
+},{
+  "name": "Курица Терияки",
+  "description": "",
+  "image": "/i/ingredients/products/chicken-teriyaki.png",
+  "price": 65,
+  "type": "fillings"
+},{
+  "name": "Ветчина",
+  "description": "(4 кусочка)",
+  "image": "/i/ingredients/products/ham.png",
+  "price": 45,
+  "type": "fillings"
+},{
+  "name": "Мелт",
+  "description": "",
+  "image": "/i/ingredients/products/melt.png",
+  "price": 70,
+  "type": "fillings"
+},{
+  "name": "Грибы",
+  "description": "(2 скупа)",
+  "image": "/i/ingredients/products/mushrooms.png",
+  "price": 50,
+  "type": "fillings"
+},{
+  "name": "Омлет",
+  "description": "",
+  "image": "/i/ingredients/products/omelet.png",
+  "price": 50,
+  "type": "fillings"
+},{
+  "name": "Пепперони",
+  "description": "(3 кусочка)",
+  "image": "/i/ingredients/products/pepperoni.png",
+  "price": 40,
+  "type": "fillings"
+},{
+  "name": "Свинина Барбекю",
+  "description": "",
+  "image": "/i/ingredients/products/pork-bbq.png",
+  "price": 65,
+  "type": "fillings"
+},{
+  "name": "Ростбиф",
+  "description": "(2-3 кусочка)",
+  "image": "/i/ingredients/products/roast.png",
+  "price": 55,
+  "type": "fillings"
+},{
+  "name": "Салями",
+  "description": "(4 кусочка)",
+  "image": "/i/ingredients/products/salami.png",
+  "price": 40,
+  "type": "fillings"
+},{
+  "name": "Морепродукты",
+  "description": "(2 скупа)",
+  "image": "/i/ingredients/products/seafood.png",
+  "price": 45,
+  "type": "fillings"
+},{
+  "name": "Острый итальянский",
+  "description": "",
+  "image": "/i/ingredients/products/spicy-italian.png",
+  "price": 60,
+  "type": "fillings"
+},{
+  "name": "Сабвэй Клаб",
+  "description": "",
+  "image": "/i/ingredients/products/subway-club.png",
+  "price": 70,
+  "type": "fillings"
+},{
+  "name": "Тунец",
+  "description": "(2 скупа)",
+  "image": "/i/ingredients/products/tuna.png",
+  "price": 55,
+  "type": "fillings"
+},{
+  "name": "Индейка",
+  "description": "(3 кусочка)",
+  "image": "/i/ingredients/products/turkey.png",
+  "price": 45,
+  "type": "fillings"
+},{
+  "name": "Индейка и ветчина",
+  "description": "(2/2 кусочка)",
+  "image": "/i/ingredients/products/turkey-ham.png",
+  "price": 45,
+  "type": "fillings"
+},{
+  "name": "30 См",
+  "image": "/i/sizes/2x.jpg",
+  "price": 170,
+  "type": "sizes"
+},{
+  "name": "Белый с кунжутом",
+  "description": "",
+  "image": "/i/bread/white-sesame.png",
+  "price": 0,
+  "type": "breads"
+},{
+  "name": "Орегано-пармезан",
+  "description": "",
+  "image": "/i/bread/oregano-parmesan.png",
+  "price": 0,
+  "type": "breads"
+},{
+  "name": "15 См",
+  "image": "/i/sizes/1x.jpg",
+  "price": 110,
+  "type": "sizes"
+},{
+  "name": "БМТ",
+  "description": "",
+  "image": "/i/ingredients/products/bmt.png",
+  "price": 60,
+  "type": "fillings"
+},{
+  "name": "Моцарелла",
+  "description": "(1 скуп)",
+  "image": "/i/ingredients/products/moc.png",
+  "price": 20,
+  "type": "fillings"
+}]

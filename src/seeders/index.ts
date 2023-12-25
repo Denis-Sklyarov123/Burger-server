@@ -27,3 +27,5 @@ async function addDataIsCollectionEmpty() {
 }
 
 export default addDataIsCollectionEmpty;
+
+// seed -u 'mongodb://127.0.0.1:27017/Burgers' --drop-database ./src/data

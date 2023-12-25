@@ -6,12 +6,6 @@ import additionalRoutes from './routes/index';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import ProductsSchema from './models/Product';
-import addProductsToBd from './helpers/addProductsToBD';
-import MenuSchema from './models/Menu';
-import addMenuToBd from './helpers/addMenuToBD';
-import addFillingsToBd from './helpers/addFillingsToBD';
-import FillingsSchema from './models/Filling';
 
 const app = express();
 const port = 3000;
