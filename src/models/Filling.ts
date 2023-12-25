@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-export interface FillingsType {
+export interface FillingType {
   name: string;
   description?: string;
   image: string;
@@ -7,7 +7,7 @@ export interface FillingsType {
   type: string;
 }
 
-const FillingsSchema = new Schema<FillingsType>({
+const FillingsSchema = new Schema<FillingType>({
   name: String,
   description: String,
   image: String,

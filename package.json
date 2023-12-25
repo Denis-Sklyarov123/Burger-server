@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "run-seed": "seed -u 'mongodb://127.0.0.1:27017/Burgers' --drop-database ./src/data",
     "dev": "npx ts-node-dev src/index.ts"
   },
   "dependencies": {

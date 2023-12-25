@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
-import additionalRoutes from './routes/index';
+import routes from './routes';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -26,13 +26,13 @@ mongoose
     console.log('✅: Connection to the MongoDB is successful!');
   })
   .catch(err => {
-    console.log({
+    console.error({
       level: 'error',
       message: err,
     });
   });
 
-app.use(additionalRoutes);
+app.use(routes);
 
 app.listen(port, () => {
   console.log(`🔥: Example app listening on port ${port}!`);
