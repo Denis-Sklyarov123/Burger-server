@@ -8,7 +8,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 const clientUrl = process.env.CLIENT_URL ?? 'http://localhost:8080/';
 
 app.use(
