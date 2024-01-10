@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import ProductsSchema from '../models/Product';
-import { PaginationParameters } from 'mongoose-paginate-v2';
+// import { PaginationParameters } from 'mongoose-paginate-v2';
 
 // sort, filter, paging
 // https://www.npmjs.com/package/mongoose-paginate-v2
