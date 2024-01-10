@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
+import * as errorHandler from '../src/utils/errorHandler';
 import routes from './routes';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -33,6 +34,7 @@ mongoose
   });
 
 app.use(routes);
+app.use(errorHandler.clientErrorHandler);
 
 app.listen(port, () => {
   console.log(`🔥: Example app listening on port ${port}!`);

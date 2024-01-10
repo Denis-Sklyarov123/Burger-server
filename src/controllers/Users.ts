@@ -30,6 +30,7 @@ const login = async (req: Request, res: Response) => {
   });
 
   if (!findUser) {
+    // throw new Error('BROKEN');
     return res.status(404).send({ message: `You are not register` });
   }
 

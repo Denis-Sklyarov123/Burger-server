@@ -1,14 +1,15 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, Document, PaginateModel, ObjectId } from 'mongoose';
+import mongoosePaginate from 'mongoose-paginate-v2';
 
-export interface ProductsType {
-  name: string;
-  description: string;
-  image: string;
-  price: number;
-  category: string;
+export interface ProductsType extends Document {
+  name: String;
+  description: String;
+  image: String;
+  price: Number;
+  category: String;
 }
 
-const ProductsSchema = new Schema<ProductsType>({
+const ProductsSchema: Schema = new Schema({
   name: String,
   description: String,
   image: String,
@@ -16,4 +17,10 @@ const ProductsSchema = new Schema<ProductsType>({
   category: String,
 });
 
-export default model('Products', ProductsSchema);
+ProductsSchema.plugin(mongoosePaginate);
+
+interface Product<T extends Document> extends PaginateModel<T> {}
+
+const ProductModel: Product<ProductsType> = model<ProductsType>('Product', ProductsSchema) as Product<ProductsType>;
+
+export default ProductModel;
