@@ -7,10 +7,10 @@ import ProductsSchema from '../models/Product';
 const getByCategory = async function (req: Request, res: Response, next: NextFunction) {
   try {
     const query = {
-      category: 'burgers',
+      category: 'sandwiches',
     };
     const option = {
-      limit: 2,
+      limit: 20,
       sort: { price: 1 },
     };
 
