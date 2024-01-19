@@ -10,7 +10,8 @@ import mongoose from 'mongoose';
 
 const app = express();
 const port = process.env.PORT;
-const clientUrl = process.env.CLIENT_URL ?? 'http://localhost:8080/';
+const clientUrl = process.env.CLIENT_URL || '*';
+const UrlDB = process.env.DB_URL;
 
 app.use(
   cors({
@@ -22,16 +23,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
-  .connect(`mongodb://localhost:27017/Burgers`)
+  // .env
+  .connect(`${UrlDB}`)
   .then(() => {
     console.log('✅: Connection to the MongoDB is successful!');
-  })
-  .catch(err => {
-    console.error({
-      level: 'error',
-      message: err,
-    });
   });
+// ???
+// .catch(err => {
+//   console.error({
+//     level: 'error',
+//     message: err,
+//   });
+// });
 
 app.use(routes);
 app.use(errorHandler.clientErrorHandler);

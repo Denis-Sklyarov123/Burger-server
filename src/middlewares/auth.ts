@@ -1,0 +1,17 @@
+import jwt from 'jsonwebtoken';
+import { Request, Response, NextFunction } from 'express';
+
+function authMiddleware(req: Request, res: Response, next: NextFunction) {
+  const token = req.headers.cookie?.split('=').pop();
+
+  if (token) {
+    jwt.verify(token, process.env.SECRET_KEY ?? '', err => {
+      if (err) {
+        return next(err);
+      }
+      next();
+    });
+  }
+}
+
+export default authMiddleware;
