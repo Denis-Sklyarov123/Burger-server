@@ -11,7 +11,7 @@ import mongoose from 'mongoose';
 const app = express();
 const port = process.env.PORT;
 const clientUrl = process.env.CLIENT_URL || '*';
-const UrlDB = process.env.DB_URL;
+const UrlDB = process.env.DB_URL || '';
 
 app.use(
   cors({
@@ -24,7 +24,7 @@ app.use(express.json());
 
 mongoose
   // .env
-  .connect(`${UrlDB}`)
+  .connect(UrlDB)
   .then(() => {
     console.log('✅: Connection to the MongoDB is successful!');
   });

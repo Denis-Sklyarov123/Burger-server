@@ -14,7 +14,6 @@ const getFillings = async function (req: Request, res: Response, next: NextFunct
     const Filling = await FillingsSchema.paginate({ type }, params);
 
     if (!Filling.docs.length) {
-      0;
       return res.status(404).send({ message: ' No such value exists', category: 'category' });
     }
 

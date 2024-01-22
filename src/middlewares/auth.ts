@@ -11,6 +11,8 @@ function authMiddleware(req: Request, res: Response, next: NextFunction) {
       }
       next();
     });
+  } else {
+    return res.status(401).send('Вы не авторизованы');
   }
 }
 
